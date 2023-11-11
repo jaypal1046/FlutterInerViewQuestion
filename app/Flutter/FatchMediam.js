@@ -1,0 +1,30 @@
+import Link from "next/link";
+
+async function getTickets() {
+    const res = await fetch("https://jaypal1046.pythonanywhere.com/Getcollection/1/Flutter",{
+        next:{
+            revalidate: 30 //use 30 to opt  out of using catch
+        }
+    });
+    return res.json();
+  }
+  
+  export default async function FatchMediamList() {
+    const flutterQ = await getTickets();
+  
+    return (
+      <>
+        {flutterQ["data"].map((flutters) => (
+          <Link href={`Flutter/${flutters.QID}`} key={`Flutter/${flutters.QID}`}>
+          <div key={`Mediam ${flutters.QID}`} className="card my-5">
+            <h3>Question: {flutters.question}</h3>
+            <p>Amswere: {flutters.answer}</p>
+            <div className={`pill Mediam ${flutters.difficulty}`}>{flutters.difficulty}</div>
+          </div>
+          </Link>
+        ))}
+        {flutterQ.length === 0 && <p className="text-center">There are no open tickets, yey!</p>}
+      </>
+    );
+  }
+  

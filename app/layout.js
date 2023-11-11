@@ -1,7 +1,11 @@
-import { Inter } from 'next/font/google'
+import { Rubik } from 'next/font/google'
 import './globals.css'
+import './header.css'
+//Component
+import NavCom from './NavCom/NavCom'
 
-const inter = Inter({ subsets: ['latin'] })
+
+const rubik = Rubik({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +15,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4632777473354952"
+     crossorigin="anonymous"></script>
+      </head>
+      <body className={rubik.className}>
+        <NavCom />
+        
+        {children}
+        </body>
     </html>
   )
 }
+

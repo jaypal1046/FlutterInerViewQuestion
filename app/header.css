@@ -1,0 +1,39 @@
+/* Color Variables */
+:root {
+  --color1: rgb(49, 211, 81);
+  --color2: rgb(255, 255, 255);
+  --color3: rgb(51, 51, 51);
+  --color4: #e7e7e7;
+}
+
+/* Header Styles */
+.header {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  border-color: gray;
+  border-width: 300;
+ 
+}
+
+.header > div h2 {
+  text-transform: uppercase;
+  color: var(--color2);
+  font-weight: 400;
+}
+
+.header > article {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.header > article > a {
+  padding: 0 2rem;
+
+  /* Assuming styles for styledText and myButton mixins */
+}
+
+/* Add your mixins here if not already provided */
