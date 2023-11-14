@@ -102,11 +102,17 @@ form button {
   @apply 
     bg-white 
     shadow-sm 
+   
     rounded-md 
     py-3 px-4 my-4 
     relative 
     overflow-hidden;
 }
+
+
+
+
+
 .card h3 {
   @apply 
     font-bold text-gray-700 text-sm 
@@ -138,3 +144,6 @@ form button {
     rounded-tl-md;
 }
 
+image.rounded-corners {
+  border-radius: 30px;
+}

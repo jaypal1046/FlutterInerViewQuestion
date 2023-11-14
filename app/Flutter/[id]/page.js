@@ -7,10 +7,16 @@ async function getTicket(id) {
     return res.json();
   }
 
+  export const metadata = {
+    title: 'Flutter Interview Question',
+    description: flutterQ["data"].question,
+  }
 export default async function FlutterQuestion({params}) {
 
 
     const flutterQ = await getTicket(params.id);
+    
+ 
 
   return (
     <main>

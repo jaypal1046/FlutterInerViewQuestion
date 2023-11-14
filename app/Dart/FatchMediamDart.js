@@ -18,7 +18,7 @@ async function getTickets() {
           <Link href={`Dart/${flutters.QID}`} key={`Dart/${flutters.QID}`}>
           <div key={`Dart Mediam ${flutters.QID}`} className="card my-5">
             <h3>Question: {flutters.question}</h3>
-            <p>Amswere: {flutters.answer}</p>
+            <p>Amswere: {flutters.expectedanswer}</p>
             <div className={`pill Dart Mediam ${flutters.difficulty}`}>{flutters.difficulty}</div>
           </div>
           </Link>
