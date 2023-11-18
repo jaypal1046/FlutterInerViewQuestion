@@ -11,7 +11,7 @@ function SinglePage() {
             <h1 className="dtitle">Loram ipsum dolor sit amet consectetur adipisicing elit.</h1>
             <div className="user">
               <div className="userImageContainer">
-                <Image src={Logo} alt="" fill className="avatar" />
+                <Image src={Logo} alt="avater" fill className="avatar" />
               </div>
               <div className="userTextContainer">
                 <span className="userName">Jay Pal</span>
@@ -20,7 +20,7 @@ function SinglePage() {
             </div>
           </div>
           <div className="imageContainer">
-            <Image src={Logo} fill className="postImage" />
+            <Image src={Logo} fill className="postImage" alt="Post Name" />
           </div>
         </div>
         <div className="dcontent">
