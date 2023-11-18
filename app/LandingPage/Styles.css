@@ -19,6 +19,8 @@
 
 .title{
     font-size: 96px;
+    padding: 10px;
+    
     color: black;
 }
 
@@ -37,6 +39,7 @@
 }
 .image{
     object-fit: cover;
+    border-radius: 12px;
 
 }
 
@@ -50,20 +53,72 @@
 
 .postTitle{
     font-size: 40px;
+    line-height: 1.0;
     color: black;
+    padding: 0px 0px 15px 0px;
 }
 
 .postDesc{
     font-size: 20px;
     font-weight: 300;
     color: var(--softTextColor);
+    padding: 0px 0px 10px 0px;
 
 
 }
 .button{
     padding: 16px 20px;
     border: none;
+    background-color: #ffffff; 
+    color: black;
     border-radius: 5px;
-    width: max-content
+    width: max-content;
+    border-radius: 12px;
 
 }
+
+@media screen and (max-width:1280px) {
+    .title{
+        font-size: 72px;
+    }
+
+    .postTitle{
+        font-size: 40px;
+    }
+    
+}
+ @media screen and (max-width:1024px)  {
+    .title{
+        font-size: 64px;
+    }
+    .postTitle{
+        font-size: 35px;
+    }
+
+    .imgContainer{
+        display: none;
+    }
+    
+ }
+
+ @media screen and (max-width:768px) {
+    .title{
+        font-size: 48px;
+    }
+    .postTitle{
+        font-size: 30px;
+    }
+    
+} 
+
+@media screen and (max-width:640px) {
+    .title{
+        font-size: 36px;
+    }
+    .postTitle{
+        font-size: 25px;
+    }
+    
+} 
+
+

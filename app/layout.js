@@ -3,6 +3,7 @@ import './globals.css'
 import './header.css'
 //Component
 import NavCom from './NavCom/NavCom'
+import Footer from './Footer/Footer'
 
 
 const rubik = Rubik({ subsets: ['latin'] })
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         <NavCom />
       
         {children}
+        <Footer />
         </body>
     </html>
   )

@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['new.axilthemes.com','images.unsplash.com'],
+        remotePatterns:[{ protocol: 'https', hostname: 'new.axilthemes.com' },{ protocol: 'https', hostname: 'images.unsplash.com' },{ protocol: 'https', hostname: 'images.pexels.com' }],
+
       },
+      
 }
 
 module.exports = nextConfig

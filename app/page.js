@@ -1,12 +1,36 @@
 import LandingPage from "./LandingPage/LandingPage"
+import CategoryList from "./CategoryList/CategoryList"
+import CardList from "./CardList/CardList"
+import ads from "./ads/ads"
+import style from "./header.css"
+// import Menu from "./Menus/Menus"
 
 export default function Home() {
   return (
-    <main>
-      <LandingPage />
+
+   <div className="flex"> 
+   <div>
+
+    <ads/>
+   </div>
     
-      
-    </main>
+    <main>
+   <LandingPage />
+   <CategoryList />
+   
+   <CardList />
+ 
+  
+ 
+   
+ </main>
+ <div>
+  <ads/>
+  </div>
+ 
+ </div>
+
+    
   )
 }
 
