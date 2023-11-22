@@ -1,57 +1,53 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import Style from "./style.png";
-import Culture from "./culture.png";
-import Fashion from "./fashion.png";
-import Food from "./food.png";
-import Travel from "./travel.png";
-import Coding from "./coding.png";
-import {Styles} from "./CategoryStyle.css"
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
+import { Styles } from "./CategoryStyle.css";
 
+const getCategory = async () => {
+  const res = await fetch(
+    "https://jaypal1046.pythonanywhere.com/getHomeComData/ListOfCategory/Category",
+    { cache: "no-store" }
+  );
 
-function CategoryList() {
+  if (!res.ok) {
+    throw new Error("Feaild to get Category");
+  }
+
+  return res.json();
+};
+
+const CategoryList = async () => {
+  const data = await getCategory();
+
   return (
-    <div className='ccontainer'>
-      <h1 className='ctitle'>Popular Categories</h1>
-      <div className='categories'>
-        
-          <Link href="/blog?cat=style" className='category style '>
-          <Image width={32} height={32} src={Style} className='cimage' />  
-          Style
-          </Link>
-          <Link href="/blog?cat=style" className='category fashion '>
-          <Image width={32} height={32} src={Fashion} className='cimage' />  
-          fashion
-          </Link>
-          <Link href="/blog?cat=style" className='category food '>
-          <Image width={32} height={32} src={Food} className='cimage' />  
-          food
-          </Link>
+    <div className="ccontainer">
+      <h1 className="ctitle">Popular Categories</h1>
+      <div className="categories">
+        {data["data"].map((item) => {})}
 
-          <Link href="/blog?cat=style" className='category travel '>
-          <Image width={32} height={32} src={Travel} className='cimage' />  
-          Travel
+        {data["data"].map((flutters) => (
+          <Link
+            href={flutters["href"]}
+            className={`category ${flutters["Name"]}`}
+            key={flutters["Name"]}
+          >  
+            <Image
+              width={32}
+              height={32}
+              src={flutters["url"]}
+              className="cimage"
+              alt={flutters["Name"]}
+            />
+            {flutters["Name"]}
           </Link>
-          <Link href="/blog?cat=style" className='category culture '>
-          <Image width={32} height={32} src={Culture} className='cimage' />  
-          Culture
-          </Link>
-          <Link href="/blog?cat=style" className='category coding '>
-          <Image width={32} height={32} src={Coding} className='cimage' />  
-          coding
-          </Link>
-         
-
-
-       
-
+        ))}
+        {data.length === 0 && (
+          <p className="text-center">There are no open tickets, yey!</p>
+        )}
       </div>
-    
-      
     </div>
-  )
-}
+  );
+};
 
-export default CategoryList
+export default CategoryList;

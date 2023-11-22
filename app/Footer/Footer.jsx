@@ -28,10 +28,17 @@ function Footer() {
           repellendus dorales.
         </p>
         <div className="icons">
-          <Image src={Facebook} alt="Facebook Logo" width={18} height={18} />
-          <Image src={Instagram} alt="Instagram Logo" width={18} height={18} />
-          <Image src={Youtube} alt="Youtube Logo" width={18} height={18} />
-          <Image src={XLogo} alt="X-Logo" width={18} height={18} />
+
+        <Link href="https://www.facebook.com/people/Flutter-Interview-Question/61553570529913/"> <Image src={Facebook} alt="Facebook Logo" width={18} height={18} /></Link>
+          <Link href="https://www.instagram.com/flutterinterviewquestion/"><Image src={Instagram} alt="Instagram Logo" width={18} height={18} /></Link>
+          <Link href="https://www.youtube.com/channel/UCBCSGs9Qyx8v_Xk-6u6fvXw"><Image src={Youtube} alt="Youtube Logo" width={18} height={18} /></Link>
+          <Link href="https://twitter.com/FlutterQ26361"><Image src={XLogo} alt="X-Logo" width={18} height={18} /></Link>
+
+
+         
+          
+          
+          
         </div>
       </div>
       <div className="links">
@@ -58,10 +65,10 @@ function Footer() {
 
         <div className="flink">
           <span className="listTitle">Social</span>
-          <Link href="/">Facebook</Link>
-          <Link href="/Blog">Instagram</Link>
-          <Link href="/Flutter">Youtube</Link>
-          <Link href="/Dart">X</Link>
+          <Link href="https://www.facebook.com/people/Flutter-Interview-Question/61553570529913/">Facebook</Link>
+          <Link href="https://www.instagram.com/flutterinterviewquestion/">Instagram</Link>
+          <Link href="https://www.youtube.com/channel/UCBCSGs9Qyx8v_Xk-6u6fvXw">Youtube</Link>
+          <Link href="https://twitter.com/FlutterQ26361">X @FlutterQ26361</Link>
        
           
 

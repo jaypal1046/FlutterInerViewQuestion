@@ -36,6 +36,10 @@
     font-size: 18px;
     font-weight: 300;
     color:var(--softTextColor);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
 }
 
 .clink{

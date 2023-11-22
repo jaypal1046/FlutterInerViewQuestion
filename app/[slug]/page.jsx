@@ -1,42 +1,60 @@
 import { Style } from "./Single.css";
-import Logo from "./p1.png";
-import Image from "next/image";
+import DiscBlog from "./DiscPost/discriptionBlog"
 
-function SinglePage() {
+import Image from "next/image";
+async function getPostByUrl(id) {
+  const res = await fetch("https://jaypal1046.pythonanywhere.com/getPostByIdData/"+id,{
+      next:{
+          revalidate: 60 //use 30 to opt  out of using catch
+      }
+  });
+  return res.json();
+}
+
+async function  SinglePage({params}) {
+  const flutterQ = await getPostByUrl(params.slug);
+
   return (
-    <main>
+    <>
+   
+    { 
+    flutterQ["data"]!==null && <main>
       <div className="DConatinet">
         <div className="infoContainer">
           <div className="textConatiner">
-            <h1 className="dtitle">Loram ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <h1 className="dtitle">{flutterQ["data"].title}</h1>
             <div className="user">
               <div className="userImageContainer">
-                <Image src={Logo} alt="avater" fill className="avatar" />
+                <Image src={flutterQ["data"].avatar} alt="avater" fill className="avatar" />
               </div>
               <div className="userTextContainer">
-                <span className="userName">Jay Pal</span>
-                <span className="date"> 01 Dec 2023</span>
+                <span className="userName">{flutterQ["data"].avatarName}</span>
+                <span className="date">{flutterQ["data"].date.substring(4,16)}</span>
               </div>
             </div>
           </div>
           <div className="imageContainer">
-            <Image src={Logo} fill className="postImage" alt="Post Name" />
+            <Image src={flutterQ["data"].url} fill className="postImage" alt="Post Name" />
           </div>
         </div>
         <div className="dcontent">
             < div className="dpost">
                 <div className="ddescription"></div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate perspiciatis quaerat suscipit doloremque voluptatem, iure explicabo, quod maxime facilis, ipsa minus! Officiis illum dolorum laborum harum. Possimus laborum qui molestiae.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quo vel cum. Vel numquam reprehenderit in debitis ipsa hic ipsam illo sequi? Ab, rerum sunt. Quibusdam quo officiis assumenda suscipit.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate perspiciatis quaerat suscipit doloremque voluptatem, iure explicabo, quod maxime facilis, ipsa minus! Officiis illum dolorum laborum harum. Possimus laborum qui molestiae.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quo vel cum. Vel numquam reprehenderit in debitis ipsa hic ipsam illo sequi? Ab, rerum sunt. Quibusdam quo officiis assumenda suscipit.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate perspiciatis quaerat suscipit doloremque voluptatem, iure explicabo, quod maxime facilis, ipsa minus! Officiis illum dolorum laborum harum. Possimus laborum qui molestiae.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quo vel cum. Vel numquam reprehenderit in debitis ipsa hic ipsam illo sequi? Ab, rerum sunt. Quibusdam quo officiis assumenda suscipit.</p>
+                <DiscBlog List={flutterQ["data"].content}/>
+
+                <p>{flutterQ["data"].subTitle}</p>
                 
             </div>
         </div>
       </div>
-    </main>
+    </main>}
+    
+    {flutterQ["data"] === null && <p className="text-center">There are no Blog available on this topic!</p>}
+  </>
+
+
+
+   
   );
 }
 

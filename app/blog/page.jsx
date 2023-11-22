@@ -2,14 +2,27 @@
 import BlogCardList from './BlogCardList/BlogCardList'
 import {Style} from "./blog.css"
 
-function blog() {
+
+
+
+
+async function blog({searchParams}) {
+
+  const {cat}= searchParams||"Coding"
+
+
   return (
     <main>
        
       <div className='bConatiner'>
-        <h1 className='bTitle'>Style Blog</h1>
+        <h1 className={`bTitle ${cat||"Coding"}`}>{cat||"Coding"} Blog</h1>
     <div className='bcontent'>
-      <BlogCardList/>
+
+    
+
+         <BlogCardList cat={cat||"Coding"}/>
+      
+
 
     </div>
       

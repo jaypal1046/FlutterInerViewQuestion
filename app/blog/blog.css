@@ -1,12 +1,39 @@
 .bTitle{
  background-color: coral;
- color: white;
+ color: black;
  padding: 5px 10px;
  text-align: center;
+ text-transform: capitalize;
+}
+
+
+.bTitle.Style{
+    background-color: #57c4ff31;
+
+}
+.bTitle.Fashion{
+    background-color: #da85c731;
+
+}
+.bTitle.Food{
+    background-color: #7fb88133;
+
+}
+.bTitle.Travel{
+    background-color: #ff795736;
+
+}
+.bTitle.Culture{
+    background-color: #ffb04f45;
+
+}
+.bTitle.Coding{
+    background-color: #5e4fff31;
+
 }
 
 
 .bcontent{
-    display: flex;
+    display: grid;
     gap: 50px;
 }

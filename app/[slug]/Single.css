@@ -39,7 +39,7 @@
 .imageContainer{
 
     height: 350px;
-    width: 50%;
+    width: 70%;
     position: relative;
 }
 
@@ -71,4 +71,72 @@ border-radius: 12px;
 .dpost{
     flex: 5;
     margin-top: 60px;
+}
+
+.ddescription p{
+   font-size: 20px;
+   font-weight: 300;
+   margin-bottom: 20px;
+}
+
+
+.dscPostStyle{
+   padding-top: 10px;
+ }
+ 
+
+
+@media screen and (max-width:1536px) {
+
+    .dtitle{
+       font-side: 54px;
+     
+    }
+    
+}
+
+@media screen and (max-width:1280px) {
+
+    .dtitle{
+       font-side: 48px;
+     
+    }
+    
+}
+
+@media screen and (max-width:1024px) {
+
+    
+    .infoContainer{
+        flex: 0;
+        display: grid;
+    }
+
+    .imageContainer{
+        height: 369px;
+        width: 100%;
+    }
+
+   
+    
+}
+@media screen and (max-width:640px) {
+
+    
+    .infoContainer{
+        flex: 0;
+        display: grid;
+    }
+
+    .dtitle{
+       font-size: 22px;
+       width: 100%;
+    }
+
+    .ddescription p{
+        font-size: 16px;
+       
+     }
+   
+    
 }

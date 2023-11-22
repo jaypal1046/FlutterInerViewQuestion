@@ -4,29 +4,26 @@ import logo from "./p1.png";
 import Link from 'next/link';
 import {Style} from "./BlogCard.css"
 
-function BlogCard() {
+function BlogCard({flutters}) {
   return (
     <div className="blconatiner">
       <div className="blimageConatiner">
-        <Image className="blclimage" src={logo} alt="" fill />
+        <Image className="blclimage" src={flutters.url} alt="" fill />
       </div>
       <div className="bltextConatiner">
         <div className="bldetail">
-        <span className="bldate">12.02.2023 - </span>
+        <span className="bldate">{flutters.date.substring(4,16)} - </span>
         <span className="blcdcategory">
-            CULTURE
+            {flutters.Category}
         </span>
         </div>
-        <Link href="/">
-            <h1>Lorem ipsum dolor sit amet alim consectetur adipisicing elit.</h1>
+        <Link href={`/${flutters.id}`}>
+            <h1>  {flutters.title}</h1>
         </Link>
         <p className="bldesc ">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Cupiditate, quam nisi magni ea laborum inventore voluptatum
-        laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium
-        quisquam! Harum unde sit culpa debitis.
+        {flutters.subTitle.substring(4,200)}
       </p>
-      <Link className ="blclink" href="/">Read More</Link>
+      <Link className ="blclink" href={`/${flutters.id}`}>Read More</Link>
       </div>
     </div>
   )

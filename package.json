@@ -9,12 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "isomorphic-unfetch": "^4.0.2",
     "next": "14.0.2",
     "node-fetch": "^3.3.2",
+    "prismjs": "^1.29.0",
     "react": "^18",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.48.2",
     "react-icons": "^4.11.0",
+    "react-quill": "^2.0.0",
     "react-responsive": "^9.0.2",
+    "react-syntax-highlighter": "^15.5.0",
     "sass": "^1.69.5"
   },
   "devDependencies": {

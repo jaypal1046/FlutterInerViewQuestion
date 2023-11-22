@@ -1,0 +1,73 @@
+.WContainer{
+
+}
+
+.Winput{
+    padding: 50px;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+}
+
+.Wediter{
+    display: flex;
+    gap: 20px;
+    height: 700px;
+    position: relative;
+    
+    
+}
+.WButton,.WaddButton{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--textColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.WaddButton{
+    border-color: #1a8917;
+}
+
+.Wadd{
+   display: flex;
+   gap: 20px; 
+   background-color: var(--bg);
+   position: absolute;
+   z-index: 999;
+   width: 100%;
+   left: 50px;
+}
+
+.WTextArea{
+    width: 100%;
+    padding-top: 50px;
+}
+
+.Winput::placeholder{
+    color: #b3b3b1;
+    
+}
+
+.WPublish{
+    position: absolute;
+    
+   
+  
+    padding: 10px 80px ;
+    border: none;
+    background-color: #1a8917;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.WButtonPublish{
+    padding: 80px 10px 0px 100px;
+}
+

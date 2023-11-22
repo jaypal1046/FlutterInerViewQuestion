@@ -1,0 +1,14 @@
+.cardimageContainer{
+
+    height: 350px;
+    width: 70%;
+    position: relative;
+    padding: 40px;
+   
+}
+
+.cardpostImage{
+    object-fit: cover;
+    border-radius: 12px;
+   
+    }
