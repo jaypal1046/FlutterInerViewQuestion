@@ -20,7 +20,7 @@ async function BlogCardList({cat}) {
         <div className='bposts'>
 
           {flutterQ["data"].map((flutters) => (
-              <BlogCard flutters={flutters}/>
+              <BlogCard key={flutters.id} flutters={flutters}/>
           ))}
 
           {flutterQ.length === 0 && <p className="text-center">There are no blog available on this Category!</p>}

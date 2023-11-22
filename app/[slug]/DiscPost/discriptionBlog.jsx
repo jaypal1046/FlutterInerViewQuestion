@@ -10,17 +10,17 @@ function DiscBlog({List}) {
       {List.map((items) => (
        
 
-        <div className='dscPostStyle'>
+        <div className='dscPostStyle' key={`this${items}`}>
             {items.toLowerCase().substring(0,14) === 'code001046://:' ? (
 
               
 
-          <CodeCard code={items} language="dart" />
+          <CodeCard key={items} code={items} language="dart" />
 
           ) :  items.toLowerCase().substring(0,13) === 'img001046://:' ? (
-            <ImageCard  image={items}/>
+            <ImageCard key={items} image={items}/>
           ) :(
-            <span>{items}</span>
+            <span key={items}>{items}</span>
           )}
         </div>
         
