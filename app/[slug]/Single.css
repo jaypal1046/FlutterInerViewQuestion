@@ -11,7 +11,7 @@
 }
 
 .textContainer{
-    flex: 2;
+    flex: 4;
     
 
 }
@@ -37,9 +37,10 @@
 }
 
 .imageContainer{
+    flex: 1;
 
     height: 350px;
-    width: 70%;
+    width: 60%;
     position: relative;
 }
 

@@ -21,8 +21,10 @@ async function LandingPage() {
       <Image
         className="image"
         src={flutterQ["data"].url}
+        height={700}
+        width={600}
+
         
-        fill
         alt=""
       />
     </div>

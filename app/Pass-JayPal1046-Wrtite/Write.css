@@ -1,33 +1,92 @@
 .WContainer{
+    
 
+}
+.WtextContainer{
+    padding-bottom: 20px;
+   
 }
 
 .Winput{
-    padding: 50px;
-    font-size: 40px;
-    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    width: 60%;
+    display: grid;
+
     outline: none;
     background-color: transparent;
+    border: 2px solid #b3b3b1;
 
 }
 
 .Wediter{
-    display: flex;
-    gap: 20px;
-    height: 700px;
+    display: grid;
+    
+
+    width: 100%;
     position: relative;
+    padding-top: 20px;
     
     
 }
-.WButton,.WaddButton{
+
+.selectButton{
+    display: flex;
+    
+
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+    
+    
+}
+
+.selectText{
+    
+   flex: 2;
+    
+    
+}
+
+.WTextAreaCon{
+   
+    height: 600px;
+    width: 100%;
+
+    
+    
+}
+
+.formText{
+    width: 100%;
+}
+
+.WButton {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--textColor);
+    display: grid;
+    align-items: center;
+  
+    
+    justify-content: center;
+    cursor: pointer;  
+}
+
+.WaddButton{
     width: 36px;
     height: 36px;
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid var(--textColor);
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     cursor: pointer;
 
 }
@@ -36,7 +95,7 @@
 }
 
 .Wadd{
-   display: flex;
+   display: grid;
    gap: 20px; 
    background-color: var(--bg);
    position: absolute;
@@ -47,7 +106,9 @@
 
 .WTextArea{
     width: 100%;
-    padding-top: 50px;
+    height: 600px;
+   
+    padding-top: 30px;
 }
 
 .Winput::placeholder{
@@ -69,5 +130,18 @@
 
 .WButtonPublish{
     padding: 80px 10px 0px 100px;
+}
+
+.addButtonContainer{
+    display: grid;
+    padding-left: 20px;
+    padding-top: 50px;
+}
+
+.addButtonContainerP{
+    flex: 1;
+   
+    padding-left: 20px;
+  
 }
 
