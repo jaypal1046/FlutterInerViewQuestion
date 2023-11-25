@@ -12,7 +12,7 @@ function Card({key,flutters}) {
       </div>
       <div className="textConatiner">
         <div className="detail">
-        <span className="date">{flutters.date.substring(4,16)} - </span>
+        <span className="date">{Date(flutters.date).toString().substring(4,16)} - </span>
         <span className="cdcategory">
         {flutters.Category}
         </span>

@@ -8,7 +8,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
-import { useForm, useFieldArray } from "react-hook-form";
+
 
 const sendDataToApi = async (
   title,
@@ -54,9 +54,9 @@ const sendDataToApi = async (
     }
 
     const responseData = await response.json();
-    console.log("API Response:", responseData);
+    
   } catch (error) {
-    console.error("Error:", error);
+    
   }
 };
 
@@ -90,8 +90,7 @@ function WritePost() {
 
   const handleOptionChange = (e, index) => {
     const newList = [...selectedOption];
-    console.log(e);
-    console.log();
+  
     newList[index] = e.target.value;
     setSelectedOption(newList);
   };
@@ -105,11 +104,7 @@ function WritePost() {
   const [url, setUrl] = useState("");
   const [subtitle, setSubTitle] = useState("");
 
-  const onFormSubmit = (data) => {
-    console.log(data);
-    console.log(inputList);
-  };
-
+  
   return (
     <main>
       <div className="WContainer">

@@ -32,7 +32,7 @@ export default function NavCom() {
         <div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem' }}>
 
-            <Link href={"/"}><Image src={Logo} alt='Logo'
+            <Link href="https://docs.flutter.dev/get-started/install"><Image src={Logo} alt='Logo'
               width={70}
               quality={100}
 

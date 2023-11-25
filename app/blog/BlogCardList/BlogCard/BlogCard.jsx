@@ -12,7 +12,7 @@ function BlogCard({flutters}) {
       </div>
       <div className="bltextConatiner">
         <div className="bldetail">
-        <span className="bldate">{flutters.date.substring(4,16)} - </span>
+        <span className="bldate">{Date(flutters.date).toString().substring(4,16)} - </span>
         <span className="blcdcategory">
             {flutters.Category}
         </span>

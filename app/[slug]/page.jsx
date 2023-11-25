@@ -29,7 +29,7 @@ async function  SinglePage({params}) {
               </div>
               <div className="userTextContainer">
                 <span className="userName">{flutterQ["data"].avatarName}</span>
-                <span className="date">{flutterQ["data"].date.substring(4,16)}</span>
+                <span className="date">{Date(flutterQ["data"]).toString().substring(4,16)}</span>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {styles} from "./Styles.css"
+import {Styles} from "./Styles.css"
 import Image from 'next/image'
 import Logo from "./p1.png";
 import Link from 'next/link';
