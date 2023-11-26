@@ -1,10 +1,45 @@
-async function getTicket(id) {
+async function getFlutterDoc(id) {
     const res = await fetch("https://jaypal1046.pythonanywhere.com/apiGetFlutter/"+id,{
         next:{
             revalidate: 60 //use 30 to opt  out of using catch
         }
     });
     return res.json();
+  }
+
+
+  export async function generateMetadata({ params }) {
+    try {
+      const flutterQ = await getFlutterDoc(params.id);
+      if (!flutterQ) {
+        return {
+          title: "Not-Found",
+          description: "This which your are loking dosent exist",
+        };
+      }
+  
+      return {
+        title: flutterQ["data"].question,
+        description: flutterQ["data"].answer,
+        alternates: {
+          canonical: `/Flutter/${params.id}`,
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: flutterQ["data"].question,
+          description: flutterQ["data"].answer,
+          siteId: "1467726470533754880",
+          creator: "@FlutterQ26361",
+          creatorId: "1467726470533754880",
+          images: ["https://nestjs.org/og.png"],
+        },
+      };
+    } catch (error) {
+      return {
+        title: "Not-Found",
+        description: "This which your are loking dosent exist",
+      };
+    }
   }
 
   // export const metadata = {
@@ -14,7 +49,7 @@ async function getTicket(id) {
 export default async function FlutterQuestion({params}) {
 
 
-    const flutterQ = await getTicket(params.id);
+    const flutterQ = await getFlutterDoc(params.id);
     
  
 

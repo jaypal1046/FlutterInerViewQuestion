@@ -10,6 +10,8 @@ async function getTopByCatPost(cat) {
   return res.json();
 }
 
+
+
 async function BlogCardList({cat}) {
   const flutterQ = await getTopByCatPost((cat.charAt(0).toUpperCase() + cat.slice(1))||"Coding");
 

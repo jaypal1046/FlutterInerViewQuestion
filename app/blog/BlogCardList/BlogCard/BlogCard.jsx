@@ -8,7 +8,8 @@ function BlogCard({flutters}) {
   return (
     <div className="blconatiner">
       <div className="blimageConatiner">
-        <Image className="blclimage" src={flutters.url} alt="" fill />
+        <Image className="blclimage" src={flutters.url} alt={flutters.urlAlt}    height={700}
+        width={700} />
       </div>
       <div className="bltextConatiner">
         <div className="bldetail">
@@ -18,10 +19,10 @@ function BlogCard({flutters}) {
         </span>
         </div>
         <Link href={`/${flutters.id}`}>
-            <h1>  {flutters.title}</h1>
+            <h1 className='bcardTitle'>  {flutters.title}</h1>
         </Link>
         <p className="bldesc ">
-        {flutters.subTitle.substring(4,200)}
+        {flutters.subTitle.substring(0,200)}
       </p>
       <Link className ="blclink" href={`/${flutters.id}`}>Read More</Link>
       </div>

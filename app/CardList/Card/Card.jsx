@@ -8,7 +8,10 @@ function Card({key,flutters}) {
   return (
     <div className="conatiner" key={key}>
       <div className="imageConatiner">
-        <Image className="climage" src={flutters.url} alt="" fill />
+        <Link href={flutters.url} >
+        <Image className="climage" src={flutters.url} alt={flutters.urlAlt}    height={700}
+        width={700} />
+        </Link>
       </div>
       <div className="textConatiner">
         <div className="detail">
@@ -18,7 +21,7 @@ function Card({key,flutters}) {
         </span>
         </div>
         <Link href={`/${flutters.id}`}>
-            <h1>{flutters.title}</h1>
+            <h1 className="cardTitle">{flutters.title}</h1>
         </Link>
         <p className="desc">
         {flutters.subTitle}

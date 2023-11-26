@@ -9,8 +9,13 @@ import Footer from './Footer/Footer'
 const rubik = Rubik({ subsets: ['latin'] })
 
 export const metadata = {
+  metadataBase: new URL("https://flutterinerviewquestion.com"),
+  
   title: 'Flutter Interview Question',
   description: 'Top Interview Question for flutter, Dart, OOPs',
+  varification:{
+      google:"google-site-verification=jCokbqF0o_f1MtlXM6wX2KJub9R303kVUjU-gApIYmQ",
+  }
 }
 
 export default function RootLayout({ children }) {

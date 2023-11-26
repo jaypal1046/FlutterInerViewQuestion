@@ -47,7 +47,7 @@ export default function NavCom() {
               <Link href={"/Flutter"}>Flutter</Link>
               <Link href={"/Dart"}>Dart</Link>
               <Link href={"/OOPs"}>OOPs</Link>
-              <Link href={"/About"}>About</Link>
+              <Link href={"/about"}>About</Link>
 
               {/* Add more links as needed */}
             </div>
@@ -71,7 +71,7 @@ export default function NavCom() {
             <Link href={"/Flutter"}>Flutter</Link>
             <Link href={"/Dart"}>Dart</Link>
             <Link href={"/OOPs"}>OOPs</Link>
-            <Link href={"/About"}>About</Link>
+            <Link href={"/about"}>About</Link>
 
           </article>
         </div>

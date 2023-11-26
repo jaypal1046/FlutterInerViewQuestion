@@ -5,7 +5,7 @@ import Card from "./Card/Card"
 
 
 
-async function getTopPost(id) {
+async function getTopPost() {
   const res = await fetch("https://jaypal1046.pythonanywhere.com/getPostMostViewDataAll",{
       next:{
           revalidate: 60 //use 30 to opt  out of using catch

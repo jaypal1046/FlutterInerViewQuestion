@@ -22,10 +22,12 @@ function Footer() {
           <h1 className="logoText">Hi from Dash</h1>
         </div>
         <p className="logoDesc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-          necessitatibus similique aspernature obcaecati veritatis. Aperiam cum
-          porro sequi, totam minima conswquunture, aspernature deleniti vero
-          repellendus dorales.
+          {/* FIVQ is stand for Flutter Iner View Question. We provide Interview Question for prepration for Flutter .
+          We Provide Inside view of Flutter Interview Question.
+          We provide blog regarding Flutter that include letest new and Updates. */}
+
+Discover FIVQ, your ultimate destination for a deep dive into Flutter interview questions and stay updated with the latest developments in the Flutter ecosystem, ensuring a well-rounded preparation experience.
+
         </p>
         <div className="icons">
 
@@ -49,17 +51,21 @@ function Footer() {
           <Link href="/Flutter">Flutter</Link>
           <Link href="/Dart">Dart</Link>
           <Link href="/OOPs">OOPs</Link>
-          <Link href="/">About</Link>
+          <Link href="/about">About Us</Link>
           
 
         </div>
 
         <div className="flink">
-          <span className="listTitle">Tags</span>
-          <Link href="/">Style</Link>
-          <Link href="/Blog">Fashion</Link>
-          <Link href="/Flutter">Coding</Link>
-          <Link href="/Dart">Travel</Link>
+          <span className="listTitle">Categoty</span>
+          <Link href="/blog?cat=style">Coding</Link>
+          <Link href="/blog?cat=Fastion">Fastion</Link>
+          <Link href="/blog?cat=Food">Food</Link>
+          <Link href="/blog?cat=Travel">Travel</Link>
+          <Link href="/blog?cat=Culture">Culture</Link>
+          <Link href="/blog?cat=Style">Style</Link>
+         
+          
             
         </div>
 

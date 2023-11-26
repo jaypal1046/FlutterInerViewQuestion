@@ -6,7 +6,7 @@ function ImageCard({image,key}) {
     const modifiedurl=image.replace("amp;", '');
   return (
     <div key={key} className='cardimageContainer'>
-            <Image src={modifiedurl} className='cardpostImage'fill alt="Post Name" />
+            <Image src={modifiedurl} height={500} width={800} className='cardpostImage' alt="Post Name" />
            
           </div>
   )

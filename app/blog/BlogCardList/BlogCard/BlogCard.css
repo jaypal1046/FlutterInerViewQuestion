@@ -2,23 +2,24 @@
     margin-bottom: 50px;
     
     align-self: center;
+    display: flex;
     gap: 50px;
 }
 
 .blimageConatiner {
-    flex: 3;
-    height: 350px;
+ 
     position: relative;
 }
 
 .blclimage {
     object-fit: cover;
     border-radius: 12px;
+  
+    
 }
 
 .bltextConatiner {
-    padding-top: 50px;
- 
+   
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -36,14 +37,27 @@
 .bldesc{
     font-size: 18px;
     font-weight: 300;
-    color:var(--softTextColor);
+    color: #626262;
+
 }
 
 .blclink{
  border-bottom: 1px solid crimson;
  width: max-content;
  padding: 2px 0px;
+ color: #000;
 }
+
+
+
+
+
+.bcardTitle{
+    text-align: start;
+    color: black;
+}
+
+
 
 @media screen and (max-width:768px) {
     .blimageConatiner{

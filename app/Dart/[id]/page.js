@@ -7,6 +7,40 @@ async function getDartDoc(id) {
     return res.json();
   }
 
+  export async function generateMetadata({ params }) {
+    try {
+      const flutterQ = await getDartDoc(params.id);
+      if (!flutterQ) {
+        return {
+          title: "Not-Found",
+          description: "This which your are loking dosent exist",
+        };
+      }
+  
+      return {
+        title: flutterQ["data"].question,
+        description: flutterQ["data"].expectedanswer,
+        alternates: {
+          canonical: `/Dart/${params.id}`,
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: flutterQ["data"].question,
+          description: flutterQ["data"].expectedanswer,
+          siteId: "1467726470533754880",
+          creator: "@FlutterQ26361",
+          creatorId: "1467726470533754880",
+          images: ["https://nestjs.org/og.png"],
+        },
+      };
+    } catch (error) {
+      return {
+        title: "Not-Found",
+        description: "This which your are loking dosent exist",
+      };
+    }
+  }
+
 export default async function FlutterQuestion({params}) {
 
 

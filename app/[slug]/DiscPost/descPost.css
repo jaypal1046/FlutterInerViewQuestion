@@ -9,9 +9,9 @@
   /* Apply a common style to all heading tags */
 h1, h2, h3, h4, h5, h6 {
   color: #333; /* Text color */
-  font-family: 'Arial', sans-serif; /* Font family */
-  font-weight: bold; /* Font weight */
-  text-align: center; /* Text alignment */
+
+  
+  text-align: start; /* Text alignment */
   margin-bottom: 10px; /* Bottom margin */
 }
 
@@ -48,8 +48,8 @@ h6 {
 
 
 p {
-  font-family: 'Arial', sans-serif;
+  
   font-size: 16px;
-  font-style: italic;
+  
 }
 
