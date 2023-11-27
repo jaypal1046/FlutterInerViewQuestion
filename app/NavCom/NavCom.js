@@ -44,10 +44,12 @@ export default function NavCom() {
           </div>
           {isOpen && (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '4px' }}>
-              <Link href={"/Flutter"}>Flutter</Link>
-              <Link href={"/Dart"}>Dart</Link>
-              <Link href={"/OOPs"}>OOPs</Link>
+              <Link href={"/flutter"}>Flutter</Link>
+              <Link href={"/dart"}>Dart</Link>
+              <Link href={"/oops"}>OOPs</Link>
+              <Link href={"/blog"}>Blog</Link>
               <Link href={"/about"}>About</Link>
+              
 
               {/* Add more links as needed */}
             </div>
@@ -68,9 +70,10 @@ export default function NavCom() {
           <article >
 
 
-            <Link href={"/Flutter"}>Flutter</Link>
-            <Link href={"/Dart"}>Dart</Link>
-            <Link href={"/OOPs"}>OOPs</Link>
+            <Link href={"/flutter"}>Flutter</Link>
+            <Link href={"/dart"}>Dart</Link>
+            <Link href={"/oops"}>OOPs</Link>
+            <Link href={"/blog"}>Blog</Link>
             <Link href={"/about"}>About</Link>
 
           </article>

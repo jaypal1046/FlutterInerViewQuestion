@@ -1,0 +1,34 @@
+.bTitle{
+    background-color: coral;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: capitalize;
+   }
+   
+   
+   .bTitle.style{
+       background-color: #57c4ff31;
+   
+   }
+   .bTitle.fashion{
+       background-color: #da85c731;
+   
+   }
+   .bTitle.food{
+       background-color: #7fb88133;
+   
+   }
+   .bTitle.travel{
+       background-color: #ff795736;
+   
+   }
+   .bTitle.culture{
+       background-color: #ffb04f45;
+   
+   }
+   .bTitle.coding{
+       background-color: #5e4fff31;
+   
+   }
+   

@@ -1,0 +1,8 @@
+.clcontainer{
+    flex: 5;
+}
+.cltitle{
+    margin: 50px 0px;
+    text-align: start;
+    color: black;
+}

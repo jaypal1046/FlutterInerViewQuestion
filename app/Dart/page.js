@@ -2,6 +2,13 @@
 import FatchDartList from './FatchListDart'
 import FatchMediamDartList from './FatchMediamDart'
 import FatchAdvanceDartList from './FatchAdvanceDart'
+export const metadata = {
+  
+  
+  title: 'Dart Interview Question',
+  description: 'Best Dart Question Answer with difficulty',
+ 
+}
 
 export default function Dart() {
 

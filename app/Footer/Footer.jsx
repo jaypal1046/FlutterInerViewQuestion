@@ -47,10 +47,10 @@ Discover FIVQ, your ultimate destination for a deep dive into Flutter interview 
         <div className="flink">
           <span className="listTitle">Links</span>
           <Link href="/">Homepage</Link>
-          <Link href="/Blog">Blog</Link>
-          <Link href="/Flutter">Flutter</Link>
-          <Link href="/Dart">Dart</Link>
-          <Link href="/OOPs">OOPs</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/flutter">Flutter</Link>
+          <Link href="/dart">Dart</Link>
+          <Link href="/oops">OOPs</Link>
           <Link href="/about">About Us</Link>
           
 
@@ -58,12 +58,12 @@ Discover FIVQ, your ultimate destination for a deep dive into Flutter interview 
 
         <div className="flink">
           <span className="listTitle">Categoty</span>
-          <Link href="/blog?cat=style">Coding</Link>
-          <Link href="/blog?cat=Fastion">Fastion</Link>
-          <Link href="/blog?cat=Food">Food</Link>
-          <Link href="/blog?cat=Travel">Travel</Link>
-          <Link href="/blog?cat=Culture">Culture</Link>
-          <Link href="/blog?cat=Style">Style</Link>
+          <Link href="/blog/coding">Coding</Link>
+          <Link href="/blog/fastion">Fastion</Link>
+          <Link href="/blog/food">Food</Link>
+          <Link href="/blog/travel">Travel</Link>
+          <Link href="/blog/culture">Culture</Link>
+          <Link href="/blog/style">Style</Link>
          
           
             

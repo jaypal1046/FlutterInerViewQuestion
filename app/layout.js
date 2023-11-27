@@ -12,7 +12,7 @@ export const metadata = {
   metadataBase: new URL("https://flutterinerviewquestion.com"),
   
   title: 'Flutter Interview Question',
-  description: 'Top Interview Question for flutter, Dart, OOPs',
+  description: 'Top Interview Question for flutter, Dart, OOPs and blog',
   varification:{
       google:"google-site-verification=jCokbqF0o_f1MtlXM6wX2KJub9R303kVUjU-gApIYmQ",
   }

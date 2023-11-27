@@ -1,5 +1,5 @@
 export default async function sitemap() {
-  const baseUrl = "https://www.flutterinerviewquestion.com";
+  const baseUrl = "https://flutterinerviewquestion.com";
   async function getTopPost() {
     const news = await fetch(
       "https://jaypal1046.pythonanywhere.com/getPostMostViewDataAll",
@@ -28,7 +28,7 @@ export default async function sitemap() {
   const categoryUrl =
     getCategorypost["data"].map((category) => {
       return {
-        url: `${baseUrl}/${category.href}`,
+        url: `${baseUrl}${category.href}`,
         lastModified: new Date(),
       };
     }) ?? [];

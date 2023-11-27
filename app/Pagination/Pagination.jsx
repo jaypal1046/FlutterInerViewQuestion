@@ -6,7 +6,7 @@ function Pagination() {
   return (
     <div className='pContainer'>
 
-      <Link href="./blog?cat=Coding"><button className="pbutton"> Next</button></Link>
+      <Link href="./blog/coding"><button className="pbutton"> Next</button></Link>
       
     </div>
   )
