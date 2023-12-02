@@ -54,7 +54,7 @@ async function SinglePage({ params }) {
   return (
     <>
       {flutterQ["data"] !== null && (
-      
+        <main>
           <div className="DConatinet">
             <div className="infoContainer">
               <div className="textConatiner">
@@ -104,7 +104,7 @@ async function SinglePage({ params }) {
               </div>
             </div>
           </div>
-       
+        </main>
       )}
 
       {flutterQ["data"] === null && (

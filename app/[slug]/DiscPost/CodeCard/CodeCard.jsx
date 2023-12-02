@@ -7,9 +7,9 @@ function CodeCard({ code, language, key}) {
 
 
   return (
-    <div className="App" key={key}>
+    <div className="codeApp" key={key}>
          
-          <div className='' dangerouslySetInnerHTML={{ __html: code }}></div>
+          <div className='codeApp' dangerouslySetInnerHTML={{ __html: code }}></div>
           
         
       
