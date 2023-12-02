@@ -91,12 +91,13 @@ async function SinglePage({ params }) {
             <div className="dcontent">
               <div className="dpost">
                 <div className="ddescription"></div>
+                <p>{flutterQ["data"].subTitle}</p>
                 <DiscBlog
                   List={flutterQ["data"].content}
                   conType={flutterQ["data"].contentType}
                 />
 
-                <p>{flutterQ["data"].subTitle}</p>
+                
               </div>
             </div>
           </div>

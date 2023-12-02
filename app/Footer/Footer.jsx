@@ -74,7 +74,7 @@ Discover FIVQ, your ultimate destination for a deep dive into Flutter interview 
           <Link href="https://www.facebook.com/people/Flutter-Interview-Question/61553570529913/">Facebook</Link>
           <Link href="https://www.instagram.com/flutterinterviewquestion/">Instagram</Link>
           <Link href="https://www.youtube.com/channel/UCBCSGs9Qyx8v_Xk-6u6fvXw">Youtube</Link>
-          <Link href="https://twitter.com/FlutterQ26361">X @FlutterQ26361</Link>
+          <Link href="https://twitter.com/FlutterQ26361">@FlutterQ26361</Link>
        
           
 
