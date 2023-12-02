@@ -6,11 +6,13 @@ import {Style} from "./descPost.css"
 
 function DiscBlog({List,conType}) {
   return (
-    <div>
+    
+      <div className='BlogContainer'>
       {List.map((items,index) => (
        
 
         <div className='dscPostStyle' key={`this${items}`}>
+        
             {conType[index] === 'Code' ? (
 
               
@@ -21,13 +23,14 @@ function DiscBlog({List,conType}) {
             <ImageCard key={items} image={items}/>
           ) :
           (
-            <div className='' dangerouslySetInnerHTML={{ __html: items }}></div>
+            <div className='textCard ' dangerouslySetInnerHTML={{ __html: items }}></div>
             
           )}
         </div>
         
         ))}
     </div>
+  
   )
 }
 

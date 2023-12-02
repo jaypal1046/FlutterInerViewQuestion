@@ -54,7 +54,7 @@ async function SinglePage({ params }) {
   return (
     <>
       {flutterQ["data"] !== null && (
-        <main>
+      
           <div className="DConatinet">
             <div className="infoContainer">
               <div className="textConatiner">
@@ -90,18 +90,21 @@ async function SinglePage({ params }) {
             </div>
             <div className="dcontent">
               <div className="dpost">
-                <div className="ddescription"></div>
                 <p>{flutterQ["data"].subTitle}</p>
+                <div className="ddescription">
                 <DiscBlog
                   List={flutterQ["data"].content}
                   conType={flutterQ["data"].contentType}
                 />
+                </div>
+                
+                
 
                 
               </div>
             </div>
           </div>
-        </main>
+       
       )}
 
       {flutterQ["data"] === null && (

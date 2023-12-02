@@ -4,6 +4,14 @@
     
     align-items: center;
   }
+
+  .BlogContainer{
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+ 
+  }
   
 
   /* Apply a common style to all heading tags */
@@ -53,3 +61,8 @@ p {
   
 }
 
+.textCard{
+  display: grid;
+  width: 100%;
+  white-space: initial;
+}
