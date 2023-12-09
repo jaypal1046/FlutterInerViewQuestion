@@ -19,10 +19,10 @@ function BlogCard({flutters}) {
         </span>
         </div>
         <Link href={`/${flutters.id}`}>
-            <h1 className='bcardTitle'>  {flutters.title}</h1>
+            <h1 className='bcardTitle'>  {flutters.title.substring(0,80)}</h1>
         </Link>
-        <p className="bldesc ">
-        {flutters.subTitle.substring(0,200)}
+        <p className="bldesc">  
+        {flutters.subTitle.substring(0,158)}...
       </p>
       <Link className ="blclink" href={`/${flutters.id}`}>Read More</Link>
       </div>

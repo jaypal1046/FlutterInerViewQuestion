@@ -15,7 +15,7 @@ async function getDartQuestions() {
     return (
       <>
         {flutterQ["data"].map((flutters) => (
-          <Link href={`Dart/${flutters.QID}`} key={`Dart/${flutters.QID}`}>
+          <Link href={`dart/${flutters.QID}`} key={`Dart/${flutters.QID}`}>
           <div key={flutters.QID} className="card my-5">
             <h3>Question: {flutters.question}</h3>
             <p>Amswere: {flutters.expectedanswer}</p>
