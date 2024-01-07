@@ -197,7 +197,7 @@ export default async function sitemap() {
   const OOPsUrl =
     getOOPs["data"].map((OOPs) => {
       return {
-        url: `${baseUrl}/OOPs/${OOPs.QID}`,
+        url: `${baseUrl}/Oop/${OOPs.QID}`,
         lastModified: new Date(),
       };
     }) ?? [];
@@ -218,7 +218,7 @@ export default async function sitemap() {
   const OOPsMUrl =
     getMOOPs["data"].map((OOPs) => {
       return {
-        url: `${baseUrl}/OOPs/${OOPs.QID}`,
+        url: `${baseUrl}/Oop/${OOPs.QID}`,
         lastModified: new Date(),
       };
     }) ?? [];
@@ -239,7 +239,7 @@ export default async function sitemap() {
   const OOPsADUrl =
     getAdOOPs["data"].map((OOPs) => {
       return {
-        url: `${baseUrl}/OOPs/${OOPs.QID}`,
+        url: `${baseUrl}/Oop/${OOPs.QID}`,
         lastModified: new Date(),
       };
     }) ?? [];
@@ -276,7 +276,7 @@ export default async function sitemap() {
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/OOPs`,
+      url: `${baseUrl}/Oop`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
