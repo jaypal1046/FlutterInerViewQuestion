@@ -15,7 +15,7 @@ async function getTickets() {
     return (
       <>
         {flutterQ["data"].map((flutters) => (
-          <Link href={`flutter/${flutters.QID}`} key={`Flutter/${flutters.QID}`}>
+          <Link href={`Flutter/${flutters.QID}`} key={`Flutter/${flutters.QID}`}>
           <div key={`advance ${flutters.QID}`} className="card my-5">
             <h3>Question: {flutters.question}</h3>
             <p>Amswere: {flutters.answer}</p>

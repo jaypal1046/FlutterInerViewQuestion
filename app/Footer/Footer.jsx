@@ -48,9 +48,9 @@ Discover FIVQ, your ultimate destination for a deep dive into Flutter interview 
           <span className="listTitle">Links</span>
           <Link href="/">Homepage</Link>
           <Link href="/blog">Blog</Link>
-          <Link href="/flutter">Flutter</Link>
-          <Link href="/dart">Dart</Link>
-          <Link href="/oops">OOPs</Link>
+          <Link href="/Flutter">Flutter</Link>
+          <Link href="/Dart">Dart</Link>
+          <Link href="/Oop">OOP</Link>
           <Link href="/about">About Us</Link>
           
 

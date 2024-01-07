@@ -15,7 +15,7 @@ async function getOOPsAdv() {
     return (
       <>
         {OOPsQ["data"].map((OOPD) => (
-          <Link href={`oops/${OOPD.QID}`} key={`OOPs/${OOPD.QID}`}>
+          <Link href={`Oop/${OOPD.QID}`} key={`OOPs/${OOPD.QID}`}>
           <div key={`OOPs ${OOPD.QID}`} className="card my-5">
             <h3>Question: {OOPD.question}</h3>
             <p>Answere: {OOPD.expectedAnswer}</p>
