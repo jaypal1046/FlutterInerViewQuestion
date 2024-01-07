@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
+    "clipboard-copy": "^4.0.1",
+    "dom-parser": "^1.1.5",
     "isomorphic-unfetch": "^4.0.2",
     "next": "14.0.2",
     "node-fetch": "^3.3.2",

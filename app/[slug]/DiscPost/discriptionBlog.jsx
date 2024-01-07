@@ -11,7 +11,7 @@ function DiscBlog({ List, conType }) {
           {conType[index] === "Code" ? (
             <CodeCard key={items} code={items} language="dart" />
           ) : conType[index] === "ImageUrl" ? (
-            <ImageCard key={items} image={items} />
+            <ImageCard key={`image-${items}`} image={items} />
           ) : (
             <div
               className="textCard "
