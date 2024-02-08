@@ -1,90 +1,94 @@
-
 :root {
-    --bgcolor:#ebf0fa;
-  
+    --bgcolor: #ebf0fa;
+
     --color1: rgb(49, 211, 81);
     --color2: rgb(255, 255, 255);
     --color3: rgb(51, 51, 51);
     --color4: #e7e7e7;
     --textColor: black;
-    --softBg:#f0f0f0;
-    --softTextColor:#626262;
-  
-  
-    
-  }
-.container{
+    --softBg: #f0f0f0;
+    --softTextColor: #626262;
+
+
+
+}
+
+.container {
     margin-top: 30px;
 }
 
-.title{
+.title {
     font-size: 96px;
     padding: 10px;
-    
+
     color: black;
 }
 
-.post{
-    margin-top: 60px;
+.landingPost {
+
     display: flex;
-    
-    gap: 50px;
+
+
     width: 100%;
     padding-bottom: 40px;
-    
+
 }
 
-.imgContainer{
-   
-    width: 60%;
-   
+.landingImgContainer {
+
+    width: 55%;
+    padding-left: 20px;
+
     position: relative;
 }
-.image{
+
+.landingImage {
     object-fit: cover;
     border-radius: 12px;
-   
+
 
     flex: 2;
 
 }
 
-.textContainer{
+.landingTextContainer {
     flex: 1;
     display: flex;
-    
     flex-direction: column;
     align-items: start;
     justify-content: safe;
     align-self: center;
-    gap: 20px,
+    width: 100%;
+    padding-left: 20px;
 
 }
 
-.postTitle{
+.landingPostTitle {
     font-size: 40px;
     line-height: 1.0;
     color: black;
+    width: 100%;
     padding: 0px 0px 15px 0px;
 }
 
-.postDesc{
+.landingPostDesc {
     font-size: 20px;
     overflow: hidden;
     font-weight: 300;
     color: var(--softTextColor);
-   
+
     display: -webkit-box;
-    -webkit-line-clamp: 4; 
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 
 
 }
-.button{
+
+.landingButton {
     padding: 16px 20px;
-    top: 10px;
+    top: 20px;
     border: none;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     color: black;
     border-radius: 5px;
     width: max-content;
@@ -93,47 +97,49 @@
 }
 
 @media screen and (max-width:1280px) {
-    .title{
+    .landingTitle {
         font-size: 72px;
     }
 
-    .postTitle{
+    .landingPostTitle {
         font-size: 40px;
     }
-    
+
 }
- @media screen and (max-width:1024px)  {
-    .title{
+
+@media screen and (max-width:1024px) {
+    .landingTitle {
         font-size: 64px;
     }
-    .postTitle{
+
+    .landingPostTitle {
         font-size: 35px;
     }
 
-    .imgContainer{
+    .landingImgContainer {
         display: none;
     }
-    
- }
 
- @media screen and (max-width:768px) {
-    .title{
+}
+
+@media screen and (max-width:768px) {
+    .landingTitle {
         font-size: 48px;
     }
-    .postTitle{
+
+    .landingPostTitle {
         font-size: 30px;
     }
-    
-} 
+
+}
 
 @media screen and (max-width:640px) {
-    .title{
+    .landingTitle {
         font-size: 36px;
     }
-    .postTitle{
+
+    .landingPostTitle {
         font-size: 25px;
     }
-    
-} 
 
-
+}

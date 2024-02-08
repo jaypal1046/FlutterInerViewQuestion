@@ -79,10 +79,9 @@ async function SinglePage({ params }) {
                 </div>
               </div>
               <div className="imageContainer">
-                <Image
+                <img
                   src={flutterQ["data"].url}
-                  height={600}
-                  width={700}
+              
                   className="postImage"
                   alt="Post Name"
                 />

@@ -1,23 +1,34 @@
+"use client";
 import LandingPage from "./LandingPage/LandingPage";
 import CategoryList from "./CategoryList/CategoryList";
 import CardList from "./CardList/CardList";
 import ads from "./ads/ads";
 import style from "./header.css";
+import { useMediaQuery } from "react-responsive";
 // import Menu from "./Menus/Menus"
 
 export default function Home() {
+
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   return (
     <div className="flex">
-      <div>
-        <ads />
-      </div>
+     
+      {isMobile?(
+        <div>
+          <LandingPage />
+        <CategoryList />
 
-      <main>
+        <CardList />
+          </div>
+      ):(<main>
         <LandingPage />
         <CategoryList />
 
         <CardList />
-      </main>
+      </main>)
+
+      }
       <div>
         <ads />
       </div>

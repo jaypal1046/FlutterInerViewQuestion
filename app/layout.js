@@ -28,7 +28,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className={rubik.className}>
         <NavCom />
-      
         {children}
         <Footer />
         </body>

@@ -35,7 +35,7 @@ export default function NavCom() {
             <Link href="https://docs.flutter.dev/get-started/install">
               <Image src={Logo} alt="Logo" width={70} quality={100} />
             </Link>
-            <Link href={"/"}>Hi from Dash</Link>
+            <Link href={"/"}>Hi am Dash</Link>
             <div onClick={toggleNavbar} style={{ cursor: "pointer" }}>
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </div>
@@ -61,12 +61,12 @@ export default function NavCom() {
         </div>
       ) : (
         <div className="header">
-          <div>
+          <div >
             <Link href={"/"}>
               <Image src={Logo} alt="Logo" width={70} quality={100} />
             </Link>
 
-            <Link href={"/"}>Hi from Dash</Link>
+            <Link href={"/"} className="navLogoContainer">Hi  from Dash</Link>
           </div>
           <article>
             <Link href={"/Flutter"}>Flutter</Link>
