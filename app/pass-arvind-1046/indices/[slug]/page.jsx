@@ -21,17 +21,18 @@ async function getOption(id) {
   );
   return res.json();
 }
-export function formatNumber(num) {
-  if (num >= 10000000) {
-    return (num / 10000000).toFixed(1) + ' Cr';
-  } else if (num >= 100000) {
-    return (num / 100000).toFixed(1) + ' Lakh';
-  } else if (num >= 10000) {
-    return (num / 1000).toFixed(1) + ' K';
-  } else {
-    return num.toString();
-  }
-}
+// export function formatNumber(num) {
+//   if (num >= 10000000) {
+//     return `${(num / 10000000).toFixed(1)}` + ' Cr';
+//   } else if (num >= 100000) {
+//     return `${(num / 100000).toFixed(1)}` + ' Lakh';
+//   } else if (num >= 10000) {
+//     return `${(num / 1000).toFixed(1)}` + ' K';
+//   } else {
+//     return num.toString();
+//   }
+// }
+//skdjfhkdsf
 
 
 export default async function Indices({params }) {
@@ -127,10 +128,10 @@ export default async function Indices({params }) {
                 if(options["records"]["expiryDates"][0]==option.expiryDate&& !(option.strikePrice+500<=option.CE.underlyingValue||option.strikePrice-500>=option.CE.underlyingValue)){
                   return (
 
-                    <tr>
-                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice<=option.CE.underlyingValue||option.strikePrice<option.CE.underlyingValue+50?"bg-white":"bg-[#c7d2fe]"}`}>{formatNumber(option.CE.openInterest)}</td>
-                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice<=option.CE.underlyingValue||option.strikePrice<option.CE.underlyingValue+50?"bg-white":"bg-[#c7d2fe]"}`}>{formatNumber(option.CE.changeinOpenInterest)}</td>
-                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice<=option.CE.underlyingValue||option.strikePrice<option.CE.underlyingValue+50?"bg-white":"bg-[#c7d2fe]"}`}>{ formatNumber(option.CE.totalTradedVolume)}</td>
+                    <tr key={`key-${option.strikePrice}`}>
+                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice<=option.CE.underlyingValue||option.strikePrice<option.CE.underlyingValue+50?"bg-white":"bg-[#c7d2fe]"}`}>{`${option.CE.openInterest}`}</td>
+                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice<=option.CE.underlyingValue||option.strikePrice<option.CE.underlyingValue+50?"bg-white":"bg-[#c7d2fe]"}`}>{`${option.CE.changeinOpenInterest}`}</td>
+                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice<=option.CE.underlyingValue||option.strikePrice<option.CE.underlyingValue+50?"bg-white":"bg-[#c7d2fe]"}`}>{ `${option.CE.totalTradedVolume}`}</td>
                     <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice<=option.CE.underlyingValue||option.strikePrice<option.CE.underlyingValue+50?"bg-white":"bg-[#c7d2fe]"}`}>{option.CE.impliedVolatility}</td>
                     <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice<=option.CE.underlyingValue||option.strikePrice<option.CE.underlyingValue+50?"bg-white":"bg-[#c7d2fe]"}`}>{option.CE.lastPrice}</td>
                     <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice<=option.CE.underlyingValue||option.strikePrice<option.CE.underlyingValue+50?"bg-white":"bg-[#c7d2fe]"}`}>{option.CE.change.toFixed(2)}</td>
@@ -146,9 +147,9 @@ export default async function Indices({params }) {
                     <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice-50>option.CE.underlyingValue||option.strikePrice-50>option.CE.underlyingValue?"bg-white":"bg-[#c7d2fe]"}`}>{option.PE.change.toFixed(2)}</td>
                     <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice-50>option.CE.underlyingValue||option.strikePrice-50>option.CE.underlyingValue?"bg-white":"bg-[#c7d2fe]"}`}>{option.PE.lastPrice}</td>
                     <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice-50>option.CE.underlyingValue||option.strikePrice-50>option.CE.underlyingValue?"bg-white":"bg-[#c7d2fe]"}`}>{ option.PE.impliedVolatility}</td>
-                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice-50>option.CE.underlyingValue||option.strikePrice-50>option.CE.underlyingValue?"bg-white":"bg-[#c7d2fe]"}`}>{formatNumber(option.PE.totalTradedVolume) }</td>
-                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice-50>option.CE.underlyingValue||option.strikePrice-50>option.CE.underlyingValue?"bg-white":"bg-[#c7d2fe]"}`}>{formatNumber(option.PE.changeinOpenInterest)}</td>
-                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center  text-black ${option.strikePrice-50>option.CE.underlyingValue||option.strikePrice-50>option.CE.underlyingValue?"bg-white":"bg-[#c7d2fe]"}`}>{formatNumber(option.PE.openInterest)}</td>
+                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice-50>option.CE.underlyingValue||option.strikePrice-50>option.CE.underlyingValue?"bg-white":"bg-[#c7d2fe]"}`}>{`${option.PE.totalTradedVolume}` }</td>
+                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center text-black ${option.strikePrice-50>option.CE.underlyingValue||option.strikePrice-50>option.CE.underlyingValue?"bg-white":"bg-[#c7d2fe]"}`}>{`${option.PE.changeinOpenInterest}`}</td>
+                    <td className={`border-collapse border border-slate-400 text-xs p-1 text-center  text-black ${option.strikePrice-50>option.CE.underlyingValue||option.strikePrice-50>option.CE.underlyingValue?"bg-white":"bg-[#c7d2fe]"}`}>{`${option.PE.openInterest}`}</td>
 
                     <td className={`border-collapse border border-slate-400 text-xs p-1 text-center  bg-[#22c55e] text-white`}>{(option.PE.openInterest/option.CE.openInterest).toFixed(2)}</td>
                     <td className={`border-collapse border border-slate-400 text-xs p-1 text-center  bg-[#22c55e] text-white`}>{(option.PE.changeinOpenInterest/option.CE.changeinOpenInterest).toFixed(2)}</td>
