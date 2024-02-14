@@ -1,19 +1,18 @@
-.container {
+.categoryContainer {
+    color: white;
 
 }
 
-.ctitle{
+.categoryTitle{
     margin: 50px 0x;
-    font-size: 25px;
+    font-size: 18px;
+    font-weight: 600;
     padding-bottom: 20px;
-    text-align: start;
-
-
-    
+    text-align: start;    
     color: black;
 }
  
-.categories{
+.categoryCategories{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -22,7 +21,7 @@
 
 }
 
-.category{
+.categoryCategory{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -34,32 +33,32 @@
     color: #000;
 }
 
-.category.Style{
+.categoryCategory.Style{
     background-color: #57c4ff31;
 
 }
-.category.Fashion{
+.categoryCategory.Fashion{
     background-color: #da85c731;
 
 }
-.category.Food{
+.categoryCategory.Food{
     background-color: #7fb88133;
 
 }
-.category.Travel{
+.categoryCategory.Travel{
     background-color: #ff795736;
 
 }
-.category.Culture{
+.categoryCategory.Culture{
     background-color: #ffb04f45;
 
 }
-.category.Coding{
+.categoryCategory.Coding{
     background-color: #5e4fff31;
 
 }
 
-.cimage{
+.categoryImage{
     border-radius: 50%;
     height: 32px;
     width: 32px;
@@ -69,26 +68,26 @@
 
 
 @media screen and (max-width:1280px) {
-   .category{
+   .categoryCategory{
     width: 20%;
    }
 } 
 
 @media screen and (max-width:1024px) {
-    .category{
+    .categoryCategory{
      width: 25%;
     }
  }
 
  @media screen and (max-width:768px) {
-    .category{
+    .categoryCategory{
      width: 45%;
     }
  }
 
  
  @media screen and (max-width:640px) {
-    .category{
+    .categoryCategory{
      width: 100%;   
     }
  }

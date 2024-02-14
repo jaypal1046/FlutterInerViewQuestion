@@ -18,9 +18,9 @@ async function getTopPost() {
 async function CardList() {
   const flutterQ = await getTopPost();
   return (
-    <div className="clcontainer">
-      <h1 className="cltitle">Recent Posts </h1>
-      <div className="posts">
+    <div className="cardListContainer">
+      <h1 className="cardListTitle">Recent Posts </h1>
+      <div className="cardListPosts">
         {flutterQ["data"].map((flutters) => (
           <Card flutters={flutters} key={flutters.id} />
         ))}

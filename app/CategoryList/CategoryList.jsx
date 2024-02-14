@@ -21,22 +21,22 @@ const CategoryList = async () => {
   const data = await getCategory();
 
   return (
-    <div className="ccontainer">
-      <h1 className="ctitle">Popular Categories</h1>
-      <div className="categories">
+    <div className="categoryContainer">
+      <h1 className="categoryTitle">Popular Categories</h1>
+      <div className="categoryCategories">
         {data["data"].map((item) => {})}
 
         {data["data"].map((flutters) => (
           <Link
             href={flutters["href"]}
-            className={`category ${flutters["Name"]}`}
+            className={`categoryCategory ${flutters["Name"]}`}
             key={flutters["Name"]}
           >  
             <Image
               width={32}
               height={32}
               src={flutters["url"]}
-              className="cimage"
+              className="categoryImage"
               alt={flutters["Name"]}
             />
             {flutters["Name"]}

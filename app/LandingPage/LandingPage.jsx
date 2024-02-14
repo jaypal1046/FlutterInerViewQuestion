@@ -1,7 +1,6 @@
 import React from "react";
 import { Styles } from "./Styles.css";
 import Image from "next/image";
-import Logo from "./p1.png";
 import Link from "next/link";
 async function getMostView() {
   const res = await fetch(
@@ -31,7 +30,7 @@ async function LandingPage() {
       <div className="landingTextContainer">
         <h1 className="landingPostTitle">{flutterQ["data"].title}</h1>
         <p className="landingPostDesc">{flutterQ["data"].subTitle}</p>
-        <Link href={`/${flutterQ["data"].id}`}>
+        <Link className="landingReadmore" href={`/${flutterQ["data"].id}`}>
           <button className="landingButton">Read More</button>
         </Link>
       </div>

@@ -64,7 +64,8 @@
 }
 
 .landingPostTitle {
-    font-size: 40px;
+    font-size: 20px;
+   font-weight: 600;
     line-height: 1.0;
     color: black;
     width: 100%;
@@ -72,7 +73,7 @@
 }
 
 .landingPostDesc {
-    font-size: 20px;
+    font-size: 16px;
     overflow: hidden;
     font-weight: 300;
     color: var(--softTextColor);
@@ -80,13 +81,16 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+}
 
-
+.landingReadmore{
+ 
+    padding: 20px 20px 20px 20px;
 }
 
 .landingButton {
-    padding: 16px 20px;
-    top: 20px;
+    padding: 20px 20px 20px 20px ;
+
     border: none;
     background-color: #ffffff;
     color: black;
