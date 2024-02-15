@@ -36,7 +36,7 @@ async function getOption(id) {
 
 
 export default async function Indices({params }) {
-  const indices = await getIndices(params.slug=="BANKNIFTY"?"NIFTY_BANK":params.slug=="FINNIFTY"?"NIFTY_FIN_SERVICE":"NIFTY_50");
+ // const indices = await getIndices(params.slug=="BANKNIFTY"?"NIFTY_BANK":params.slug=="FINNIFTY"?"NIFTY_FIN_SERVICE":"NIFTY_50");
   const options = await getOption(params.slug);
   return (
     <div>
