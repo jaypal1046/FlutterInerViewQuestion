@@ -1,14 +1,14 @@
-async function getIndices(id) {
-  const res = await fetch(
-    `https://jaypal001046.pythonanywhere.com/getIndices/${id}`,
-    {
-      next: {
-        revalidate: 30, //use 30 to opt  out of using catch
-      },
-    }
-  );
-  return res.json();
-}
+// async function getIndices(id) {
+//   const res = await fetch(
+//     `https://jaypal001046.pythonanywhere.com/getIndices/${id}`,
+//     {
+//       next: {
+//         revalidate: 30, //use 30 to opt  out of using catch
+//       },
+//     }
+//   );
+//   return res.json();
+// }
 
 async function getOption(id) {
   const res = await fetch(
@@ -40,7 +40,7 @@ export default async function Indices({params }) {
   const options = await getOption(params.slug);
   return (
     <div>
-      <div className="flex">
+      {/* <div className="flex">
         <div className="bg-white rounded-lg mx-4 p-4">
           Current Price:{" "}
           {
@@ -63,7 +63,7 @@ export default async function Indices({params }) {
           YEAR RANGE:{" "}
           {indices["data"].split('<div class="P6K39c">\n')[3].split("\n")[0]}
         </div>
-      </div>
+      </div> */}
       <div>
         <table class=" border-collapse border border-slate-400 start-5">
           <thead>
