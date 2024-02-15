@@ -2,7 +2,20 @@ import { AiOutlineGithub } from 'react-icons/ai';
 import { ImYoutube2 } from 'react-icons/im';
 import { MdOutlinePlaylistPlay } from 'react-icons/md';
 
-const HomePage = () => {
+async function getIndices(id) {
+  const res = await fetch(
+    `https://jaypal001046.pythonanywhere.com/getIndices/${id}`,
+    {
+      next: {
+        revalidate: 30, //use 30 to opt  out of using catch
+      },
+    }
+  );
+  return res.json();
+}
+
+export default async function HomePage  () {
+  //const indices = await getIndices("NIFTY_50");
   return (
     <div className='bg-white dark:bg-slate-900 dark:text-white rounded-lg mx-4 p-4'>
       <h1 className='text-2xl font-semibold'>Nextjs Tailwind SandBox</h1>
@@ -33,4 +46,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+
