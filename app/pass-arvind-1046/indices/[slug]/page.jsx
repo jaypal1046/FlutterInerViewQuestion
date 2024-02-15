@@ -1,3 +1,5 @@
+
+import React from "react";
 // async function getIndices(id) {
 //   const res = await fetch(
 //     `https://jaypal001046.pythonanywhere.com/getIndices/${id}`,
@@ -10,17 +12,17 @@
 //   return res.json();
 // }
 
-async function getOption(id) {
-  const res = await fetch(
-    `https://www.nseindia.com/api/option-chain-indices?symbol=${id}`,
-    {
-      next: {
-        revalidate: 30, //use 30 to opt  out of using catch
-      },
-    }
-  );
-  return res.json();
-}
+// async function getOption(id) {
+//   const res = await fetch(
+//     `https://www.nseindia.com/api/option-chain-indices?symbol=${id}`,
+//     {
+//       next: {
+//         revalidate: 30, //use 30 to opt  out of using catch
+//       },
+//     }
+//   );
+//   return res.json();
+// }
 // export function formatNumber(num) {
 //   if (num >= 10000000) {
 //     return `${(num / 10000000).toFixed(1)}` + ' Cr';
@@ -65,28 +67,7 @@ export default async function Indices({params }) {
         </div>
       </div> */}
       <div>
-        <table class=" border-collapse border border-slate-400 start-5">
-          <thead>
-            <tr className="border-collapse border border-slate-400">
-              <th> </th>
-              <th> </th> <th> </th> <th> </th> <th> </th> <th> </th> <th> </th>
-              <th >
-                CALLS{" "}
-              </th>
-              <th> </th>
-              <th> </th>
-               <th className="border-collapse border border-slate-400" > </th>
-                <th> </th>
-                 <th> </th>
-              <th> </th>
-              <th >PUTS</th>
-              <th> </th>
-              <th> </th> <th> </th> <th> </th> <th> </th> <th> </th>
-              <th> </th>
-              <th> </th>
-              <th> </th>
-            </tr>
-          </thead>
+        <table class=" border-collapse border border-slate-400 start-5">  
           <thead>
             <tr className="border-collapse border border-slate-400 text-xs">
               <th className="border-collapse border border-slate-400 text-xs">OI</th>
