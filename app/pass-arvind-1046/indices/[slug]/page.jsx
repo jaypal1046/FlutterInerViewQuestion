@@ -1,4 +1,4 @@
-
+"client-side";
 import React from "react";
 async function getIndices(id) {
   const res = await fetch(
@@ -26,9 +26,14 @@ async function getOption(id) {
 // }
 //skdjfhkdsf
 
-
-export default async function Indices({params }) {
- const indices = await getIndices(params.slug=="BANKNIFTY"?"NIFTY_BANK":params.slug=="FINNIFTY"?"NIFTY_FIN_SERVICE":"NIFTY_50");
+export default async function Indices({ params }) {
+  const indices = await getIndices(
+    params.slug == "BANKNIFTY"
+      ? "NIFTY_BANK"
+      : params.slug == "FINNIFTY"
+      ? "NIFTY_FIN_SERVICE"
+      : "NIFTY_50"
+  );
   const options = await getOption(params.slug);
   return (
     <div>
@@ -39,7 +44,6 @@ export default async function Indices({params }) {
             indices["data"]
               .split('<div class="YMlKec fxKbKc">\n')[1]
               .split("\n")[0]
-              
           }{" "}
           {}
         </div>
@@ -57,7 +61,25 @@ export default async function Indices({params }) {
         </div>
       </div>
       <div>
-        <table class=" border-collapse border border-slate-400 start-5">  
+        <div>
+          {options["records"]["data"].map((option) => {
+            if (option.CE === undefined || option.PE === undefined) {
+              return <div key={`key-${option.strikePrice}`}></div>;
+            } else {
+              if (
+                options["records"]["expiryDates"][0] == option.expiryDate &&
+                !(
+                  option.strikePrice + 500 <= option.CE.underlyingValue ||
+                  option.strikePrice - 500 >= option.CE.underlyingValue
+                )
+              ) {
+                return <p key={`key-list-${option.strikePrice}`}>{option.strikePrice}</p>;
+              }
+            }
+          })}
+        </div>
+
+        {/* <table class=" border-collapse border border-slate-400 start-5">  
           <thead>
             <tr className="border-collapse border border-slate-400 text-xs">
               <th className="border-collapse border border-slate-400 text-xs">OI</th>
@@ -136,14 +158,14 @@ export default async function Indices({params }) {
 
             }
           </tbody>
-        </table>
+        </table> */}
       </div>
     </div>
   );
 }
 
-
-{/* <td className="border-collapse border border-slate-400">{option.CE.openInterest}</td>
+{
+  /* <td className="border-collapse border border-slate-400">{option.CE.openInterest}</td>
 <td className="border-collapse border border-slate-400">{option.CE.changeinOpenInterest}</td>
 <td className="border-collapse border border-slate-400">{option.CE.totalTradedVolume}</td>
 <td className="border-collapse border border-slate-400">{option.CE.impliedVolatility}</td>
@@ -163,4 +185,5 @@ export default async function Indices({params }) {
 <td className="border-collapse border border-slate-400">{option.PE.impliedVolatility}</td>
 <td className="border-collapse border border-slate-400">{option.PE.totalTradedVolume}</td>
 <td className="border-collapse border border-slate-400">{option.PE.changeinOpenInterest}</td>
-<td className="border-collapse border border-slate-400">{option.PE.openInterest}</td> */}
+<td className="border-collapse border border-slate-400">{option.PE.openInterest}</td> */
+}
