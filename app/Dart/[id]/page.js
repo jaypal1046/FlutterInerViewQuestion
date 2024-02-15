@@ -41,11 +41,18 @@ async function getDartDoc(id) {
     }
   }
 
+  async function getOption(id) {
+    const res = await fetch(
+      `https://www.nseindia.com/api/option-chain-indices?symbol=${id}`
+    );
+    return res.json();
+  }
+
 export default async function FlutterQuestion({params}) {
 
 
     const flutterQ = await getDartDoc(params.id);
-
+    const options = await getOption("NIFTY");
   return (
     <main>
     
@@ -57,6 +64,23 @@ export default async function FlutterQuestion({params}) {
             <p>Followup Question Answere: {flutterQ["data"].followUpQuestionAnswere}</p>
             <div className={`pill ${flutterQ["data"].difficulty}`}>{flutterQ["data"].difficulty}</div>
           </div>
+          <div>
+          {options["records"]["data"].map((option) => {
+            if (option.CE === undefined || option.PE === undefined) {
+              return <div key={`key-${option.strikePrice}`}></div>;
+            } else {
+              if (
+                options["records"]["expiryDates"][0] == option.expiryDate &&
+                !(
+                  option.strikePrice + 500 <= option.CE.underlyingValue ||
+                  option.strikePrice - 500 >= option.CE.underlyingValue
+                )
+              ) {
+                return <p key={`key-list-${option.strikePrice}`}>{option.strikePrice}</p>;
+              }
+            }
+          })}
+        </div>
           </main>
             
       

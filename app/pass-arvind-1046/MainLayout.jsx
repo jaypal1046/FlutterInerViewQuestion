@@ -1,8 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-
-
 import { AiOutlineHome, AiOutlineClose,AiOutlineStock, AiFillSignal} from 'react-icons/ai';
 import { GrProjects } from 'react-icons/gr';
 import { FaAngleRight, FaCheck, FaCheckDouble } from 'react-icons/fa';
@@ -13,23 +11,23 @@ import React, { useContext } from 'react';
 
 import { MenuContext } from './MenuContext';
 
-async function getIndices() {
-  const res = await fetch("https://jaypal1046.pythonanywhere.com/getIndices",{
-      next:{
-          revalidate: 30 //use 30 to opt  out of using catch
-      }
-  });
-  return res.json();
-}
+// async function getIndices() {
+//   const res = await fetch("https://jaypal1046.pythonanywhere.com/getIndices",{
+//       next:{
+//           revalidate: 30 //use 30 to opt  out of using catch
+//       }
+//   });
+//   return res.json();
+// }
 
-async function getStock() {
-  const res = await fetch("https://jaypal1046.pythonanywhere.com/getStock",{
-      next:{
-          revalidate: 30 //use 30 to opt  out of using catch
-      }
-  });
-  return res.json();
-}
+// async function getStock() {
+//   const res = await fetch("https://jaypal1046.pythonanywhere.com/getStock",{
+//       next:{
+//           revalidate: 30 //use 30 to opt  out of using catch
+//       }
+//   });
+//   return res.json();
+// }
 
 export default async function  MainLayout({ children }) {
   const { open } = useContext(MenuContext);
