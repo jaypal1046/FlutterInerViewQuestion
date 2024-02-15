@@ -39,7 +39,7 @@ import React from "react";
 
 export default async function Indices({params }) {
  // const indices = await getIndices(params.slug=="BANKNIFTY"?"NIFTY_BANK":params.slug=="FINNIFTY"?"NIFTY_FIN_SERVICE":"NIFTY_50");
-  const options = await getOption(params.slug);
+  //const options = await getOption(params.slug);
   return (
     <div>
       {/* <div className="flex">
@@ -100,7 +100,7 @@ export default async function Indices({params }) {
             </tr>
           </thead>
           <tbody>
-            {options["records"]["data"].map((option)=>{
+            {/* {options["records"]["data"].map((option)=>{
               if(option.CE=== undefined||option.PE===undefined){
                     return (<>
                   
@@ -144,7 +144,7 @@ export default async function Indices({params }) {
             }
             )
 
-            }
+            } */}
           </tbody>
         </table>
       </div>
