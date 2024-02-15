@@ -39,7 +39,7 @@ export default async function Indices({params }) {
   const indices = await getIndices(params.slug=="BANKNIFTY"?"NIFTY_BANK":params.slug=="FINNIFTY"?"NIFTY_FIN_SERVICE":"NIFTY_50");
   const options = await getOption(params.slug);
   return (
-    <dic>
+    <div>
       <div className="flex">
         <div className="bg-white rounded-lg mx-4 p-4">
           Current Price:{" "}
@@ -167,7 +167,7 @@ export default async function Indices({params }) {
           </tbody>
         </table>
       </div>
-    </dic>
+    </div>
   );
 }
 
