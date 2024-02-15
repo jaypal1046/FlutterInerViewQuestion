@@ -44,9 +44,7 @@ export default async function  MainLayout({ children }) {
       <div className='flex-8 h-auto'>
       
       <ul>
-        <li className='flex justify-end items-center lg:hidden'>
-          <AiOutlineClose onClick={closeSeideBarHandler} className='text-red-500 hover:text-red-800 cursor-pointer' />
-        </li>
+      
 
         <li className='flex justify-start items-center bg-blue-200  rounded-xl  p-2'>
           <AiOutlineHome className='mr-2' />

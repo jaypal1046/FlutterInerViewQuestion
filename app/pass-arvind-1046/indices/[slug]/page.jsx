@@ -2,27 +2,17 @@
 import React from "react";
 async function getIndices(id) {
   const res = await fetch(
-    `https://jaypal001046.pythonanywhere.com/getIndices/${id}`,
-    {
-      next: {
-        revalidate: 30, //use 30 to opt  out of using catch
-      },
-    }
+    `https://jaypal001046.pythonanywhere.com/getIndices/${id}`
   );
   return res.json();
 }
 
-// async function getOption(id) {
-//   const res = await fetch(
-//     `https://www.nseindia.com/api/option-chain-indices?symbol=${id}`,
-//     {
-//       next: {
-//         revalidate: 30, //use 30 to opt  out of using catch
-//       },
-//     }
-//   );
-//   return res.json();
-// }
+async function getOption(id) {
+  const res = await fetch(
+    `https://www.nseindia.com/api/option-chain-indices?symbol=${id}`
+  );
+  return res.json();
+}
 // export function formatNumber(num) {
 //   if (num >= 10000000) {
 //     return `${(num / 10000000).toFixed(1)}` + ' Cr';
@@ -39,7 +29,7 @@ async function getIndices(id) {
 
 export default async function Indices({params }) {
  const indices = await getIndices(params.slug=="BANKNIFTY"?"NIFTY_BANK":params.slug=="FINNIFTY"?"NIFTY_FIN_SERVICE":"NIFTY_50");
-  //const options = await getOption(params.slug);
+  const options = await getOption(params.slug);
   return (
     <div>
       <div className="flex">
@@ -100,11 +90,11 @@ export default async function Indices({params }) {
             </tr>
           </thead>
           <tbody>
-            {/* {options["records"]["data"].map((option)=>{
+            {options["records"]["data"].map((option)=>{
               if(option.CE=== undefined||option.PE===undefined){
-                    return (<>
+                    return (<div key={`key-${option.strikePrice}`}>
                   
-                    </>);
+                    </div>);
               }else{
                 if(options["records"]["expiryDates"][0]==option.expiryDate&& !(option.strikePrice+500<=option.CE.underlyingValue||option.strikePrice-500>=option.CE.underlyingValue)){
                   return (
@@ -144,7 +134,7 @@ export default async function Indices({params }) {
             }
             )
 
-            } */}
+            }
           </tbody>
         </table>
       </div>
